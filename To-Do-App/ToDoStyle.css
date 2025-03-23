@@ -6,15 +6,35 @@ body {
 .card1 {
     padding: 10px;
     box-shadow:  0.5rem 0.5rem 0.5rem #888888;
+    width: 50%;
+    margin: auto;
+}
+
+#taskInput {
+    border-radius: 5px 0px 0px 5px;
+}
+
+#addTask {
+    border-radius: 0px 5px 5px 0px;
 }
 
 .card2{
-    padding: 10px;
+    margin: auto;
+    padding: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow:  0.5rem 0.5rem 0.5rem #888888;
+    width: 50%;
+    max-width: 50%;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-#taskList {
-    padding: auto;
+.btn-danger {
+    word-wrap: normal;
+    word-break: normal;
 }
+
+
+
+
