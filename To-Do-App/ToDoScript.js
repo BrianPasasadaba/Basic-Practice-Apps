@@ -16,6 +16,19 @@ document.addEventListener('DOMContentLoaded', function() {
             tasks.push(task);
             saveTasks();
             input.value = '';
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = "btn btn-danger";
+            deleteButton.textContent = "Delete";
+            li.appendChild(deleteButton);
+
+            deleteButton.addEventListener('click', function() {
+                const index = tasks.indexOf(task);
+                tasks.splice(index, 1);
+                saveTasks();
+                li.remove();
+            })
+
         }
     })
 
@@ -29,8 +42,22 @@ document.addEventListener('DOMContentLoaded', function() {
             li.className = "list-group-item d-flex justify-content-between align-items-center";
             li.textContent = task;
             list.appendChild(li);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = "btn btn-danger";
+            deleteButton.textContent = "Delete";
+            li.appendChild(deleteButton);
+
+            deleteButton.addEventListener('click', function() {
+                const index = tasks.indexOf(task);
+                tasks.splice(index, 1);
+                saveTasks();
+                li.remove();
+            })
         })
     }
+
+    
 
     loadTasks();
 })
